@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
         <img src="{{ asset('images/admin_images/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Vendor Dashboard</span>
     </a>
 
     <!-- Sidebar -->
@@ -40,7 +40,7 @@
                 </li>
 
                 <!-- Catalouge -->
-                @if (Session::get('page')=="sections" || Session::get('page')=="categories")
+                @if (Session::get('page')=="products" || Session::get('page')=="categories")
                     <?php $active = "active"; ?>
                 @else
                     <?php $active = ""; ?>
@@ -49,10 +49,23 @@
                     <a href="#" class="nav-link {{ $active }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Catalougues
+                            Catalouges
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        @if (Session::get('page')=="categories")
+                            <?php $active = "active"; ?>
+                        @else
+                            <?php $active = ""; ?>
+                        @endif
+                        <li class="nav-item">
+                            <a href="{{route('vendors.categories.index')}}" class="nav-link {{ $active }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Categories </p>
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="nav nav-treeview">
                         @if (Session::get('page')=="products")
                             <?php $active = "active"; ?>
