@@ -16,6 +16,6 @@ class Vendor extends Authenticatable
     ];
 
     public function area(){
-        return  $this->belongsTo('Admins\Models\Area','area_id')->select('id','name');;
+        return  $this->belongsTo('Admins\Models\Area','area_id')->select('id','name');
     }
 }

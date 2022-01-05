@@ -3,7 +3,7 @@
 return [
     'prefix' =>[
         'login' => 'login',
-        'index' => 'index',
+        'signIn' => 'signIn',
     ],
 
     'module-name' => 'users'

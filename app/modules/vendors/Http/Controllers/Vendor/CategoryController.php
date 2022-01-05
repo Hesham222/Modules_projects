@@ -4,6 +4,7 @@ namespace Vendors\Http\Controllers\Vendor;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Vendors\Http\Requests\CategoryRequest;
 use Vendors\Models\Category;
 use Illuminate\Http\Request;
 use Session;
@@ -25,7 +26,7 @@ class CategoryController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         DB::beginTransaction();
         try {
@@ -55,7 +56,7 @@ class CategoryController extends Controller
     }
 
 
-    public function update(Request $request,$id)
+    public function update(CategoryRequest $request,$id)
     {
         $category = Category::find($id);
         DB::beginTransaction();
@@ -91,7 +92,7 @@ class CategoryController extends Controller
 
 
         } catch (\Exception $th) {
-            return $th;
+            //return $th;
             Session::flash('error_message',"Category hasn't been deleted");
             return redirect()->back();
         }

@@ -25,6 +25,13 @@ Route::namespace('Vendors\Http\Controllers\Vendor')->group(function (){
             //Begin Categories Routes
             Route::resource('categories','CategoryController');
             Route::get('delete-category/{id}','CategoryController@destroy');
+            //End Categories Routes
+
+            //Begin Products Routes
+            Route::resource('products','ProductController');
+            Route::get('delete-product/{id}','ProductController@destroy');
+
+
 
 
 

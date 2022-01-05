@@ -8,6 +8,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="" class="nav-link">Home</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="" class="nav-link">Products</a>
+        </li>
 
     </ul>
 
@@ -15,7 +18,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link"  href="">
+            <a class="nav-link"  href="{{route('users.logout')}}">
                 Logout
             </a>
         </li>

@@ -29,7 +29,7 @@ class UsersServiceProvider extends ServiceProvider
 
         $moduleName = 'users';
         config([
-          $moduleName => File::getRequire(loadConfigFile('route', $moduleName))
+            $moduleName => File::getRequire(loadConfigFile('route', $moduleName))
         ]);
         //dd(config());
         $this->loadRoutesFrom(loadRoute('web',$moduleName));
