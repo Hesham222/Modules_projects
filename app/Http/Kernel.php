@@ -4,6 +4,7 @@ namespace App\Http;
 
 use Admins\Http\Middleware\Admin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Users\Models\Buyer;
 use Vendors\Http\Middleware\Vendor;
 
 class Kernel extends HttpKernel
@@ -67,5 +68,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'admin' => Admin::class,
         'vendor' => Vendor::class,
+        'buyer' => Buyer::class,
     ];
 }

@@ -26,6 +26,7 @@
             "App\\": "app/",
             "Admins\\": "app/modules/admins",
             "Vendors\\": "app/modules/vendors",
+            "Users\\": "app/modules/users",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
 
@@ -33,7 +34,8 @@
         "classmap": [
             "database/seeders",
             "app/modules/admins/database/seeders",
-            "app/modules/vendors/database/seeders"
+            "app/modules/vendors/database/seeders",
+            "app/modules/users/database/seeders"
 
         ],
         "files": [

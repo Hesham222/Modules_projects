@@ -48,6 +48,10 @@ return [
             'driver' => 'session',
             'provider' => 'vendors',
         ],
+        'buyer' => [
+            'driver' => 'session',
+            'provider' => 'buyers',
+        ],
     ],
 
     /*
@@ -80,6 +84,11 @@ return [
             'driver' => 'eloquent',
             'model' => Admins\Models\Vendor::class,
         ],
+        'buyers' => [
+            'driver' => 'eloquent',
+            'model' => Users\Models\Buyer::class,
+        ],
+
 
         // 'users' => [
         //     'driver' => 'database',
