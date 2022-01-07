@@ -37,7 +37,7 @@ Route::namespace('Vendors\Http\Controllers\Vendor')->group(function (){
 
         });
 
-        });
+    });
 
 
 });

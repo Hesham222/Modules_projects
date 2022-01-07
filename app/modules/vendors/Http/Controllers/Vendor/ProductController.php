@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Session;
 class ProductController extends Controller
 {
-
+    //view products
     public function index()
     {
         Session::put('page','products');
@@ -19,7 +19,7 @@ class ProductController extends Controller
         return view('vendors::products.products',compact('products'));
     }
 
-
+    //view add products
     public function create()
     {
         $categories = Category::get();
@@ -28,7 +28,7 @@ class ProductController extends Controller
 
     }
 
-
+    // store products
     public function store(ProductRequest $request)
     {
         DB::beginTransaction();
@@ -54,13 +54,7 @@ class ProductController extends Controller
         }
     }
 
-
-    public function show(Product $product)
-    {
-        //
-    }
-
-
+    //view edit products
     public function edit($id)
     {
         $product = Product::find($id);
@@ -68,7 +62,7 @@ class ProductController extends Controller
         return view('vendors::products.edit_product',compact('product','categories'));
     }
 
-
+    // update products
     public function update(ProductRequest $request, $id)
     {
         $product = Product::find($id);
@@ -95,6 +89,7 @@ class ProductController extends Controller
 
     }
 
+    //delete products
     public function destroy($id)
     {
         try {

@@ -25,9 +25,10 @@ Route::namespace('Users\Http\Controllers\User')->group(function (){
 
             Route::get('logout', 'UserController@logout')->name('logout');
 
-//            //Begin Categories Routes
-//            Route::resource('categories','CategoryController');
-//            Route::get('delete-category/{id}','CategoryController@destroy');
+        //Begin Categories Routes
+
+            Route::get('products','ProductController@products')->name('products');
+
 
 
 
@@ -38,35 +39,3 @@ Route::namespace('Users\Http\Controllers\User')->group(function (){
 
 });
 
-//Route::namespace('Users\Http\Controllers\User')->group(function () {
-//
-//    Route::group(['middleware' => 'web' , 'as' => 'users.'],function (){
-//
-//        //Change default guard ('web') to admin guard
-//        Config::set('auth.defines','buyer');
-//
-//        //Begin Buyer Auth
-//
-//        Route::prefix(buildPrefix('users','login'))->group(function (){
-//
-//            Route::get('/','UserController@Login')->name('Login');
-//
-//            Route::post('/','UserController@submitLogin')->name('submitLogin');
-//        });
-//        //Begin Buyer Auth
-//
-//        Route::group(['middleware' => 'buyer:buyer','prefix'=> 'user'], function (){
-//
-//            Route::get('home','UserController@home')->name('home');
-//
-//        });
-//
-//
-//
-//        });
-//
-//
-//
-//
-//
-//});

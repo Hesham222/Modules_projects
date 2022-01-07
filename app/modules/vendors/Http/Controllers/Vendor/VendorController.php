@@ -1,6 +1,7 @@
 <?php
 
 namespace Vendors\Http\Controllers\Vendor;
+use Admins\Http\Requests\loginRequest;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class VendorController extends Controller
     }
 
     //check login
-    public function submitLogin(Request $request){
+    public function submitLogin(loginRequest $request){
 
         $data = $request->all();
 

@@ -57,6 +57,4 @@ Route::namespace('Admins\Http\Controllers\Admin')->group(function (){
 
 });
 
-//    Route::prefix(buildPrefix('admins','login'))->namespace('Admins\Http\Controllers\Admin')->group(function (){
-//        Route::get('/','AdminController@index');
-//    });
+

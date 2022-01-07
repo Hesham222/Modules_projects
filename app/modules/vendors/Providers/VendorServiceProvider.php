@@ -41,17 +41,5 @@ class VendorServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(loadMigrations($moduleName));
 
 
-//        $moduleName = 'admins';
-//        config([
-//          $moduleName => File::getRequire(__DIR__.$ds.'..'.$ds.'config'.$ds.'route.php')
-//        ]);
-//        //dd(config());
-//        $this->loadRoutesFrom(__DIR__.$ds.'..'.$ds.'routes'.$ds.'web.php');
-//
-//        $this->loadViewsFrom(__DIR__.$ds.'..'.$ds.'resources'.$ds.'views',$moduleName);
-//
-//        $this->loadMigrationsFrom(__DIR__.$ds.'..'.$ds.'database'.$ds.'migrations');
-//
-//        $this->loadTranslationsFrom(__DIR__.$ds.'..'.$ds.'resources'.$ds.'lang',$moduleName);
     }
 }

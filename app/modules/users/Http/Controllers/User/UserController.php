@@ -2,6 +2,7 @@
 
 namespace Users\Http\Controllers\User;
 
+use Admins\Http\Requests\loginRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ class UserController extends Controller
     }
 
     //check login
-    public function submitLogin(Request $request){
+    public function submitLogin(loginRequest $request){
 
         $data = $request->all();
 
@@ -38,6 +39,7 @@ class UserController extends Controller
         return view('users::home');
     }
 
+    //logout
     public function logout(){
         if(AdminLogged('buyer')){
 
@@ -48,23 +50,5 @@ class UserController extends Controller
 
     }
 
-//    //check login
-//    public function submitLogin(Request $request){
-//
-//        $data = $request->all();
-//
-//        if(Auth::guard('buyer')-> attempt(['email' => $data['email'], 'password' => $data['password']])){
-//            return redirect()->route('users.home');
-//
-//        }else {
-//            Session::flash('error_message','Invalid Email or Password');
-//            return redirect()->back();
-//        }
-//    }
-//
-//
-//    public function home(){
-//
-//        return view('users::index.home');
-//    }
+
 }

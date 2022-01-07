@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Session;
 class CategoryController extends Controller
 {
-
+    //view categories
     public function index()
     {
         Session::put('page','categories');
@@ -18,14 +18,14 @@ class CategoryController extends Controller
         return view('vendors::categories.categories',compact('categories'));
     }
 
-
+    //view add categories
     public function create()
     {
 
         return view('vendors::categories.add_category');
     }
 
-
+    // store categories
     public function store(CategoryRequest $request)
     {
         DB::beginTransaction();
@@ -48,6 +48,7 @@ class CategoryController extends Controller
 
     }
 
+    //view edit categories
     public function edit($id)
     {
         $category = Category::find($id);
@@ -55,7 +56,7 @@ class CategoryController extends Controller
 
     }
 
-
+    // update categories
     public function update(CategoryRequest $request,$id)
     {
         $category = Category::find($id);
@@ -79,7 +80,7 @@ class CategoryController extends Controller
 
     }
 
-
+    //delete categories
     public function destroy($id)
     {
         try {
@@ -97,8 +98,5 @@ class CategoryController extends Controller
             return redirect()->back();
         }
     }
-    public function deleteCategory($id)
-    {
 
-    }
 }

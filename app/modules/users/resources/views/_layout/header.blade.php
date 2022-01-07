@@ -9,7 +9,7 @@
             <a href="" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="" class="nav-link">Products</a>
+            <a href="{{route('users.products')}}" class="nav-link">Products</a>
         </li>
 
     </ul>
